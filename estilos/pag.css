@@ -5,7 +5,7 @@
 }
 
 :root{
-    --preto: #0000;
+    --preto: #1d1d1d;
     --amarelo: #F5C52D;
     --azul0: #008FF4;
     --azul: #006dba;
@@ -48,6 +48,7 @@ div.header{
 
 header{
     color: white;
+    background-color: var(--preto);
 }
 header a{
     color: white;
@@ -128,7 +129,7 @@ aside{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    background-color: white;
+    background-color: #1d1d1d;
     border: 3px solid var(--amarelo);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
@@ -161,10 +162,19 @@ div.menu {
     box-shadow: 100px 0px 1000px black;
     transform: translateX(-100%);
     opacity: 0;
-
+    transition: transform 0.3s ease, opacity 0.3s ease;
     z-index: 1100;  /* Maior que o header */
 }
 
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
 
 div.menu.show {
     transform: translateX(0);  /* Move o menu para a tela */
@@ -251,25 +261,3 @@ span.linha{
     transition: 0.3s ease-in-out;
     color: transparent;
 }
-
-
-
-hr{
-    margin: 20px 0px;
-}
-
-.cpem-caminho{
-    display: block;
-    margin: auto;
-    text-align: center;
-    color: black;
-    text-decoration: none;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.cpem-caminho:hover{
-    cursor: pointer;
-    text-decoration: underline;
-}
-

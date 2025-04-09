@@ -8,12 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="shortcut icon" href="estilos/imagens/favicon.ico" type="image/x-icon">
     <style>
+        :root{
+            --black: #1d1d1d;
+        }
         #menu2{
             width: 40%;
         }
         div.menu{
             color: white;
-            background-color: black;
+            background-color: var(--black);
         }
         nav.menu a{
             color: white;
@@ -60,12 +63,7 @@
                 <ul>
                     <li><a href="pag001.html" onclick="menuOff()">Página inicial</a></li>
                     <li><a href="pag002.html" onclick="menuOff()">Nossa equipe</a></li>
-                    <li><a href="pag003.html" onclick="menuOff()">Propóstas extras</a></li>
-                    <hr>
                 </ul>
-                <a href="cpem.html" class="cpem-caminho" onclick="menuOff()">
-                    <div>Junte-se ao CPEMilitares!</div>
-                </a>
             </nav>
         </div>
         <nav>
