@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArchTec - página inicial</title>
+    <link rel="stylesheet" href="estilos/pag.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="shortcut icon" href="estilos/imagens/favicon.ico" type="image/x-icon">
+    <style>
+        #menu2{
+            width: 40%;
+        }
+        div.menu{
+            color: white;
+            background-color: black;
+        }
+        nav.menu a{
+            color: white;
+        }
+        @media screen and (min-width: 600px) and (max-width: 1100px){
+            div.menu{
+                width: 400px;
+            }
+              
+        }
+        @media screen and (min-width: 1100px) {
+     
+            article{
+                flex-flow: row wrap;
+                width: 100vw
+            }
+            aside{
+                width: 500px
+            }
+            .prop{
+                width: 90%
+            }
+            div.menu{
+                width: 600px
+            }
+        }
+      
+       
+    </style>
+</head>
+<body>
+
+    </div>
+    <div class="main">
+        <button class="togglemenu" onclick="menu()"> <!--Simbolo do menu-->
+            <span class="linha"></span>
+            <span class="linha"></span>
+            <span class="linha"></span>
+        </button>
+        <div class="menu">
+            <nav class="menu" class="hidden">
+                <img src="estilos/imagens/blacktech.png" class="minlogo" id="menu2" alt="Logo">
+                <h1>BlackTech</h1>
+                <ul>
+                    <li><a href="pag001.html" onclick="menuOff()">Página inicial</a></li>
+                    <li><a href="pag002.html" onclick="menuOff()">Nossa equipe</a></li>
+                    <li><a href="pag003.html" onclick="menuOff()">Propóstas extras</a></li>
+                    <hr>
+                </ul>
+                <a href="cpem.html" class="cpem-caminho" onclick="menuOff()">
+                    <div>Junte-se ao CPEMilitares!</div>
+                </a>
+            </nav>
+        </div>
+        <nav>
+            <img src="estilos/imagens/blacktech.png" class="minlogo" alt="Logo"> <!--Não consegui aumentar a imagem, ela esta muito pequena, caso consiga arrumar no gimp ou no codigo agradeço-->
+            <h1>BlackTech</h1>
+        </nav>
+        <header>
+            <div class="header">
+                <p>Toda honra e glória ao nosso senhor Jesus Cristo</p>
+                <h1>BlackTech</h1>
+            </div>
+        </header>
+        <main>
+            <article>
+                <aside class="prop">
+                    <h1>lorem</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, tempora deleniti sequi minus saepe quibusdam nulla rerum mollitia. Perspiciatis minima unde consequatur ipsum! Sit impedit eius delectus doloremque, nulla similique.</p>
+                </aside>
+
+                <aside class="prop">
+                    <h1>lorem</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque eos, amet optio eligendi quos magnam accusantium aliquid accusamus odit ab delectus tempora exercitationem, sed iste adipisci quae voluptatem nostrum aspernatur!</p>
+                </aside>
+
+                <aside class="prop">
+                    <h1>lorem</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque eos, amet optio eligendi quos magnam accusantium aliquid accusamus odit ab delectus tempora exercitationem, sed iste adipisci quae voluptatem nostrum aspernatur!</p>
+                </aside>
+
+                <aside class="prop">
+                    <h1>lorem</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque eos, amet optio eligendi quos magnam accusantium aliquid accusamus odit ab delectus tempora exercitationem, sed iste adipisci quae voluptatem nostrum aspernatur!</p>
+                </aside>
+            </article>
+        </main>
+    </div>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/popup.js"></script>
+</body>
+</html>

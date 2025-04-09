@@ -1,0 +1,275 @@
+@charset "UTF-8";
+@font-face {
+    font-family: idroid;
+    src: url(fontes/idroid.otf);
+}
+
+:root{
+    --preto: #0000;
+    --amarelo: #F5C52D;
+    --azul0: #008FF4;
+    --azul: #006dba;
+    --azul1: #003eea;
+    --font1: 'idroid';
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+}
+
+body{
+    width: 99vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+
+}
+
+header{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('imagens/fachada-escola.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+}
+
+div.header{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+header{
+    color: white;
+}
+header a{
+    color: white;
+    font-weight: bold;
+}
+header h1{
+    color: white;
+    font-family: 'idroid';
+    font-size: 3em;
+    padding: 10px;
+}
+
+article{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #4b0707, #6e0a0a, rgb(233, 0, 0));
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.main{
+    position: relative;
+}
+
+.minlogo{
+    width: 50px;
+    margin: 0px 10px 0px 60px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+nav h1{
+    display: inline;
+    font-size: 2em;
+    font-family: 'Android' cursive;
+}
+
+nav span{
+    margin: 0px 10px;
+}
+
+aside.prop h1{
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--azul1);
+}
+
+aside.prop{
+    display: block;
+    text-align: center;
+    padding: 100px 0px;
+}
+
+.emoticon{
+    width: 15%;
+    display: inline-block;
+    margin: 10px;
+}
+
+aside p{
+    display: inline-block;
+    line-height: 1.5em;
+    width: 75%;
+    vertical-align: middle;
+}
+h2{
+    text-align: center;
+}
+aside{
+    border-radius: 5px;
+    margin: 50px 20px;
+    border: 1px solid rgba(128, 128, 128, 0.336);
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    background-color: white;
+    border: 3px solid var(--amarelo);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+li{
+    list-style-position: inside;
+}
+aside h2{
+    width: 100%;
+}
+
+footer{
+    background-color: rgb(20, 20, 20);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a{
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+div.menu {
+    position: fixed;
+    height: 100%;
+    background-color: #ffffff;
+    width: 60%;
+    box-shadow: 100px 0px 1000px black;
+    transform: translateX(-100%);
+    opacity: 0;
+
+    z-index: 1100;  /* Maior que o header */
+}
+
+
+div.menu.show {
+    transform: translateX(0);  /* Move o menu para a tela */
+    opacity: 1;  /* Torna o menu visível */
+}
+
+div.menu.hide {
+    transform: translateX(-100%);  /* Move o menu para fora da tela */
+    opacity: 0;  /* Torna o menu invisível */
+}
+nav.menu{
+    display: flex;
+    flex: 0 1 auto;
+    flex-flow: column wrap;
+}
+.menu li{
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+li a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: 0.1s;
+}
+
+li a:hover{
+    font-size: 1.25em;
+    font-weight: bolder;
+}
+
+button.togglemenu{  /*Config do simbolo do menu*/
+    z-index: 9999;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    
+} 
+
+span.linha{
+    position: relative;
+    display: block;
+    background-color: black;
+    margin: 5px auto;
+    height: 3px;
+    width: 35px;
+    transform-origin: center;
+    transition: 0.3s ease-in-out;
+}
+    
+.material-symbols-outlined{
+    cursor: pointer;
+    
+}
+
+.x .linha:nth-child(2){
+    width: 0px;
+    transition: 0.3s ease-in-out;
+}
+
+.x .linha:nth-child(1){
+    transform: translateY(8.5px) rotate(-45deg);
+    transition: 0.4s ease-in-out;
+}
+
+.x .linha:nth-child(3){
+    transform: translateY(-8.5px) rotate(45deg);
+    transition: 0.4s ease-in-out;
+}
+
+.menu .minlogo{
+    margin-left: 10px;
+}
+
+.none{
+    width: 0px;
+    transition: 0.3s ease-in-out;
+    color: transparent;
+}
+
+
+
+hr{
+    margin: 20px 0px;
+}
+
+.cpem-caminho{
+    display: block;
+    margin: auto;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.cpem-caminho:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
